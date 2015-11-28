@@ -1,0 +1,11 @@
+{
+    "name": "tygrolew-gmail/example-php-package-require-another",
+    "autoload": {
+        "psr-4" : {
+            "TygrolewGmail\\": "src/"
+        }
+    },
+	"require":  {
+        "tygrolew-gmail/example-php-package-begin-with-composer": "0.3.*"
+    }
+}
