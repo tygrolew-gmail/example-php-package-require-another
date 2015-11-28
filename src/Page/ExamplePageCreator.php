@@ -13,8 +13,11 @@ class ExamplePageCreator
 {
   public function getPage()
   {
-    displayHeader( new TextHeaderCreator("Tytuł strony") );
-    echo "Test content";
-    displayFooter( new TextFooterCreator() );
+    $t = "";
+    $creator = new TextHeaderCreator("Tytuł strony");
+    $t .= $creator->getHeader();
+    $t .= "Test content";
+    //displayFooter( new TextFooterCreator() );
+    return $t;
   }
 }
