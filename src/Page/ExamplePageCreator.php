@@ -9,7 +9,7 @@ use TygrolewGmail\Page\Item\IHeaderCreator;
 use TygrolewGmail\Page\Item\TextHeaderCreator;
 use TygrolewGmail\Page\Item\DomHeaderCreator;
 
-class ExamplePageCreator
+class ExamplePageCreator implements IPageCreator
 {
   public function getPage()
   {
@@ -17,7 +17,8 @@ class ExamplePageCreator
     $creator = new TextHeaderCreator("Tytuł strony");
     $t .= $creator->getHeader();
     $t .= "Test content";
-    //displayFooter( new TextFooterCreator() );
+    $creator = new TextFooterCreator("Autor strony");
+    $t .= $creator->getFooter();
     return $t;
   }
 }
